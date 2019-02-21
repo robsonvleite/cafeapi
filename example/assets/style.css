@@ -1,0 +1,108 @@
+/**
+Full Stack PHP Developer Console CSS
+ */
+@import url('https://fonts.googleapis.com/css?family=Open+sans|Source+Code+Pro');
+
+:root {
+    --fsphp: #1F2026;
+    --fsline: #475163;
+    --green: #35ba9b;
+    --blue: #3aadd9;
+    --yellow: #f5b945;
+    --red: #d94452;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", serif;
+}
+
+body {
+    padding: 30px 30px 0 30px;
+    font-family: "Source Code Pro", serif;
+    overflow-x: hidden;
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6, p, article, pre {
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 5px solid var(--fsline);
+}
+
+p {
+    font-size: 0.875em;
+    margin: 10px 0;
+}
+
+.error {
+    color: var(--red);
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 15px;
+    border: 1px solid var(--red);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0 0 20px 0;
+}
+
+form {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-left: 5px solid var(--fsline);
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 0.875em;
+    font-family: "Open Sans", serif;
+    border: 1px solid var(--fsline);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+form button {
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 20px 0 0 0;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: #FFFFFF;
+    background-color: var(--green);
+}
+
+.xdebug-var-dump {
+    font-size: 0.8em !important;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 0 0 30px 0;
+    padding: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.xdebug-var-dump * {
+    font-family: "Source Code Pro", serif;
+    margin: 0;
+}
