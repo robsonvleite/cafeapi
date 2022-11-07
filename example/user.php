@@ -23,7 +23,7 @@ var_dump($user->response());
  */
 echo "<h1>UPDATE</h1>";
 
-$update = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRIPPED);
+$update = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 if ($update && !empty($update["user"])) {
     $user->update($update);

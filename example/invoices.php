@@ -45,7 +45,7 @@ if ($index->error()) {
  */
 echo "<h1>CREATE</h1>";
 
-$create = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRIPPED);
+$create = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 if ($create && !empty($create["create"])) {
     $invoiceCreate = $invoices->create($create);
 
@@ -110,7 +110,7 @@ $invoiceUpdate = $invoices->read($invoiceId);
 if ($invoiceUpdate->error()) {
     echo "<p class='error'>{$invoiceUpdate->error()->message}</p>";
 } else {
-    $update = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRIPPED);
+    $update = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     if ($update && !empty($update["update"])) {
         $invoiceUpdate->update($invoiceId, $update);
